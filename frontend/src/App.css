@@ -1,0 +1,464 @@
+/* Fika Coffee - App Styles */
+
+/* Hero section styling */
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(253, 252, 248, 0.9) 0%, rgba(242, 237, 228, 0.95) 100%);
+}
+
+/* Smooth scroll container */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+/* Image hover effects */
+.image-hover {
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.image-hover:hover {
+  transform: scale(1.05);
+}
+
+/* Button hover animation */
+.btn-hover {
+  transition: all 0.3s ease;
+}
+
+.btn-hover:hover {
+  transform: scale(1.05);
+}
+
+.btn-hover:active {
+  transform: scale(0.98);
+}
+
+/* Card animations */
+.card-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* Section divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #E6DCC8 50%, transparent 100%);
+}
+
+/* Instagram grid */
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+/* Map container */
+.map-container {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(44, 36, 32, 0.08);
+}
+
+/* Menu category pill */
+.category-pill {
+  transition: all 0.3s ease;
+}
+
+.category-pill:hover {
+  background-color: #D97757;
+  color: white;
+}
+
+.category-pill.active {
+  background-color: #D97757;
+  color: white;
+}
+
+/* Navbar glass effect */
+.navbar-glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(253, 252, 248, 0.9);
+  border-bottom: 1px solid rgba(230, 220, 200, 0.5);
+}
+
+/* Form input styling */
+.form-input {
+  transition: all 0.3s ease;
+  border: 1px solid #E6DCC8;
+  background: #F2EDE4;
+}
+
+.form-input:focus {
+  border-color: #D97757;
+  box-shadow: 0 0 0 3px rgba(217, 119, 87, 0.1);
+}
+
+/* Reservation card */
+.reservation-card {
+  background: linear-gradient(145deg, #FFFFFF 0%, #F9F6F0 100%);
+  border: 1px solid #E6DCC8;
+}
+
+/* Coffee steam animation */
+@keyframes steam {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-40px) scale(1.4);
+    opacity: 0;
+  }
+}
+
+.steam {
+  animation: steam 2s ease-in-out infinite;
+}
+
+/* Parallax effect */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Link underline animation */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #D97757;
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* ========================================
+   ENHANCED ANIMATIONS - Fika Coffee
+   ======================================== */
+
+/* Smooth Pop-Up Animation - for modal/cards entrance */
+@keyframes smoothPopUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Floating Animation - for badges/decorative elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+  75% {
+    transform: translateY(-4px) rotate(-1deg);
+  }
+}
+
+/* Floating with scale - for images */
+@keyframes floatScale {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) scale(1.02);
+  }
+}
+
+/* Glow Pulse Animation - for buttons/CTAs */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(217, 119, 87, 0.3), 0 4px 15px rgba(217, 119, 87, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(217, 119, 87, 0.5), 0 8px 30px rgba(217, 119, 87, 0.25);
+  }
+}
+
+/* Glow Pulse for sage color */
+@keyframes glowPulseSage {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(95, 128, 101, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(95, 128, 101, 0.5);
+  }
+}
+
+/* Stagger Reveal - for list items */
+@keyframes staggerReveal {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Zoom Reveal - for images */
+@keyframes zoomReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Slide Up Reveal */
+@keyframes slideUpReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Rotate In */
+@keyframes rotateIn {
+  0% {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+/* Shake Animation - for attention */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+  20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+
+/* Bounce In */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Floating animations */
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-scale {
+  animation: floatScale 5s ease-in-out infinite;
+}
+
+/* Glow animations */
+.animate-glow {
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+.animate-glow-sage {
+  animation: glowPulseSage 2.5s ease-in-out infinite;
+}
+
+/* Pop-up animation */
+.animate-pop-up {
+  animation: smoothPopUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Reveal animations */
+.animate-zoom-reveal {
+  animation: zoomReveal 0.6s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUpReveal 0.6s ease-out forwards;
+}
+
+.animate-rotate-in {
+  animation: rotateIn 0.5s ease-out forwards;
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.6s ease-out forwards;
+}
+
+/* Shake for attention */
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Spring hover effect - for interactive elements */
+.spring-hover {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.spring-hover:hover {
+  transform: scale(1.08);
+}
+
+.spring-hover:active {
+  transform: scale(0.95);
+}
+
+/* Magnetic hover - subtle magnetic pull effect */
+.magnetic-hover {
+  transition: transform 0.3s ease-out;
+}
+
+.magnetic-hover:hover {
+  transform: translateY(-4px);
+}
+
+/* Card reveal with shadow */
+.card-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image shine effect on hover */
+.image-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+  z-index: 2;
+}
+
+.image-shine:hover::before {
+  left: 100%;
+}
+
+/* Gradient border animation */
+@keyframes gradient-border {
+  0%, 100% {
+    border-color: #D97757;
+  }
+  50% {
+    border-color: #5F8065;
+  }
+}
+
+.animate-gradient-border {
+  animation: gradient-border 3s ease-in-out infinite;
+}
+
+/* ========================================
+   ACCESSIBILITY - Reduced Motion
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .animate-float,
+  .animate-float-slow,
+  .animate-float-scale,
+  .animate-glow,
+  .animate-glow-sage {
+    animation: none !important;
+  }
+}
+
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Only apply will-change on hover to save resources */
+.will-change-hover:hover {
+  will-change: transform;
+}
